@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="id" class="dark">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Praktikum Tailwind CSS - Grid Layout dan Dark Mode</title>
+    <link href="../dist/output.css" rel="stylesheet">
+</head>
+<body class="bg-white dark:bg-gray-900 text-gray-800 dark:text-gray-200 font-sans">
+    <header class="bg-red-600 text-white p-4">
+        <div class="container mx-auto flex justify-between items-center">
+            <h1 class="text-2xl font-bold">Galeri Epic Bettle One Piece</h1>
+            <button id="dark-mode-toggle" class="btn toggle-dark-mode">Toggle Dark Mode</button>
+        </div>
+    </header>
+    <section class="py-20">
+        <div class="container mx-auto text-center">
+            <h2 class="text-4xl font-bold mb-4">Selamat Datang di Galeri Kami</h2>
+            <p class="text-lg mb-8">Koleksi foto terbaik untuk Anda.</p>
+        </div>
+      </section>
+      <section class="container mx-auto px-4">
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          <!-- Card 1 -->
+          <div class="bg-white dark:bg-gray-800 rounded-lg shadow-md overflow-hidden">
+            <img src="/src/image/rogershirohige.jpg" alt="Foto 1" class="w-full h-48 object-cover">
+            <div class="p-4">
+              <h3 class="text-xl font-semibold mb-2">Roger vs Shirohige</h3>
+              <p class="text-gray-600 dark:text-gray-400">Pertarungan raja baja laut Gol D. Roger dan Manusia Terkuat Edward Newgate (Shirohige)</p>
+            </div>
+          </div>
+          <!-- Tambahkan Card 2, 3, dst. dengan struktur yang sama -->
+          <!-- Card 2 -->
+          <div class="bg-white dark:bg-gray-800 rounded-lg shadow-md overflow-hidden">
+            <img src="/src/image/bigmomkaido.jpg" alt="Foto 2" class="w-full h-48 object-cover">
+            <div class="p-4">
+              <h3 class="text-xl font-semibold mb-2">Kaido vs Big Mom</h3>
+              <p class="text-gray-600 dark:text-gray-400">Pertarungan Kaisar Laut Kaido melawan Kaisar Laut Big Mom</p>
+            </div>
+          </div>
+          <!-- Card 3 -->
+          <div class="bg-white dark:bg-gray-800 rounded-lg shadow-md overflow-hidden">
+            <img src="/src/image/garpaokiji.jpg" alt="Foto 3" class="w-full h-48 object-cover">
+            <div class="p-4">
+              <h3 class="text-xl font-semibold mb-2">Garp vs Aokiji</h3>
+              <p class="text-gray-600 dark:text-gray-400">Pertarugan Pahlawan Angkatan Laut Monkey D. Garp melawan Mantan Admiral Kuzan (Aokiji)</p>
+            </div>
+          </div>
+          <!-- Card 4 -->
+          <div class="bg-white dark:bg-gray-800 rounded-lg shadow-md overflow-hidden">
+            <img src="/src/image/kaidoyamato.jpg" alt="Foto 4" class="w-full h-48 object-cover">
+            <div class="p-4">
+              <h3 class="text-xl font-semibold mb-2">Kaido vs Yamato</h3>
+              <p class="text-gray-600 dark:text-gray-400">Pertarugan Kaisar Laut Kaido melawan putri kandungnya Yamato</p>
+            </div>
+          </div>
+          <!-- Card 5 -->
+          <div class="bg-white dark:bg-gray-800 rounded-lg shadow-md overflow-hidden">
+            <img src="/src/image/bigmomdeath.jpg" alt="Foto 5" class="w-full h-48 object-cover">
+            <div class="p-4">
+              <h3 class="text-xl font-semibold mb-2">Big Mom vs Kid dan Law</h3>
+              <p class="text-gray-600 dark:text-gray-400">Pertarugan Kaisat Laut Big Mom melawan Generasi Terburuk Kid dan Law, diakhiri dengan kematian Big Mom</p>
+            </div>
+          </div>
+          <!-- Card 6 -->
+          <div class="bg-white dark:bg-gray-800 rounded-lg shadow-md overflow-hidden">
+            <img src="/src/image/kaidoluffy.jpg" alt="Foto 6" class="w-full h-48 object-cover">
+            <div class="p-4">
+              <h3 class="text-xl font-semibold mb-2">Kaido vs Luffy</h3>
+              <p class="text-gray-600 dark:text-gray-400">Pertarungan Kaisar Laut Kaido vs Generasi Terburuk Luffy, diakhiri dengan kematian Kaido</p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <footer class="bg-red-600 text-white p-4 mt-10">
+        <div class="container mx-auto text-center">
+          <p>&copy; 2024 Galeri Foto. All rights reserved.</p>
+        </div>
+      </footer>
+      <script>
+        const toggleDarkMode = document.getElementById('dark-mode-toggle');
+        const htmlElement = document.documentElement;
+      
+        toggleDarkMode.addEventListener('click', () => {
+          htmlElement.classList.toggle('dark');
+        });
+      </script>
+</body>
+</html>
